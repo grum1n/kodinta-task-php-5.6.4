@@ -1,4 +1,12 @@
-<?php
-echo "hello world xx";
-echo 'PHP version: ' . phpversion();
-echo "grumin";
+<?php 
+
+    include('path.php'); 
+    $site_title = 'Home page';
+
+?>
+
+<?php include(ROOT_PATH . '/app/includes/public/header.php');?>
+
+<?php echo $site_title; ?>
+
+<?php include(ROOT_PATH . '/app/includes/public/footer.php');?>

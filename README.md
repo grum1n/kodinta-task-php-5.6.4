@@ -1,5 +1,9 @@
 
+#   user crud created
 
+    reikia optimizuoti ir pakeisti   
+    $sql = "SELECT * FROM users WHERE user = '$username'";
+    $sql = "SELECT * FROM users WHERE user = ? , password = ?";
 
 #   koninta task php environment 5.6.40
 
@@ -17,7 +21,7 @@
         OK useriu lentele: 'users':
         id int (11)
         user varchar (50)
-        password varchar (50)
+        password varchar (50) //klaida, jei reikia hashinti password tai rekia kad butu daugiau pvz: 100
 
         OK naujienu lentele: 'news'
         id (11)

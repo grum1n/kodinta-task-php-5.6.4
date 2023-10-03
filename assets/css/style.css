@@ -1,0 +1,15 @@
+.container{
+    padding: 16px;
+    background-color: aquamarine;
+}
+
+.navigation{
+    display:flex;
+    gap:16px;
+    list-style: none;
+}
+
+footer{
+    padding: 16px;
+    background-color: rgb(127, 168, 255);
+}
