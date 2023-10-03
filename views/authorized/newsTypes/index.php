@@ -1,9 +1,9 @@
 <?php
 
 include('../../../path.php');
-include(ROOT_PATH . '/app/controllers/users.php');
+include(ROOT_PATH . '/app/controllers/newsTypes.php');
 adminOnly();
-$site_title = 'Dashboard - Users';
+$site_title = 'Dashboard - News Types';
 
 ?>
 
@@ -12,20 +12,20 @@ $site_title = 'Dashboard - Users';
 
 <div class="">
     <div class="">
-        <h2>Users</h2>
+        <h2>News Types</h2>
         <?php include(ROOT_PATH . '/app/includes/authorized/messages.php'); ?>
 
         <table>
             <thead>
                 <th>#</th>
-                <th>Username</th>
+                <th>News Types</th>
             </thead>
             <tbody>
-                <?php foreach ($users as $key => $value) : ?>
+                <?php foreach ($newsTypes as $key => $value) : ?>
                     <tr class="">
                         <td><?php echo $key + 1; ?></td>
                         <td>
-                            <?php echo $value['user']; ?>
+                            <?php echo $value['title']; ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>

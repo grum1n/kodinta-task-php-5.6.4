@@ -3,6 +3,8 @@ include_once(ROOT_PATH . "/app/config/db.php");
 include(ROOT_PATH . "/app/helpers/middleware.php");
 include_once(ROOT_PATH . "/app/helpers/validateUser.php");
 
+$users = selectAll('users');
+
 $errors = array();
 $username = '';
 $password = '';

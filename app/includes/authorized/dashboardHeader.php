@@ -20,6 +20,15 @@
                         <?php echo $_SESSION['username']; ?>
                     </li>
                     <li>
+                        <a href="<?php echo BASE_URL . '/views/authorized/users/index.php' ?>" class="">Users</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo BASE_URL . '/views/authorized/news/index.php' ?>" class="">News</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo BASE_URL . '/views/authorized/newsTypes/index.php' ?>" class="">News Types</a>
+                    </li>
+                    <li>
                         <a href="<?php echo BASE_URL . '/views/authorized/logout.php' ?>" class="">logout</a>
                     </li>
                 </ul>

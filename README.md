@@ -5,7 +5,7 @@
     $sql = "SELECT * FROM users WHERE user = '$username'";
     $sql = "SELECT * FROM users WHERE user = ? , password = ?";
 
-#   koninta task php environment 5.6.40
+#   kodinta task php environment 5.6.40
 
     PHP version: 5.6.40
     Apache/2.4.51 (Win64) PHP/5.6.40
