@@ -22,7 +22,7 @@ $site_title = 'Dashboard - Create news';
         <form action="create.php" method="post">
             <div>
                 <label>Short </label>
-                <input type="text" name="short" value="<?php echo $short; ?>" class="">
+                <input type="text" name="short_text" value="<?php echo $short_text; ?>" class="">
             </div>
 
             <div>
@@ -33,7 +33,7 @@ $site_title = 'Dashboard - Create news';
             <div class="">
                 <?php if (empty($visible)) : ?>
                     <label>
-                        <input type="checkbox" name="visible" value="<?php echo $short; ?>"/> visible
+                        <input type="checkbox" name="visible" value="<?php echo $visible; ?>"/> visible
                     </label>
                 <?php else : ?>
                     <label>

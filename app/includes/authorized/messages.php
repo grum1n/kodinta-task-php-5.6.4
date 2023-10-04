@@ -1,5 +1,5 @@
 <?php if (isset($_SESSION['message'])) : ?>
-    <div class=" <?php echo $_SESSION['type']; ?>">
+    <div class=" ">
         <li class="">
             <?php echo $_SESSION['message']; ?>
         </li>

@@ -9,4 +9,6 @@
 
 <?php echo $site_title; ?>
 
+<?php include(ROOT_PATH . '/views/frontend/home.php');?>
+
 <?php include(ROOT_PATH . '/app/includes/public/footer.php');?>

@@ -29,7 +29,7 @@ $site_title = 'Dashboard - News';
                         <tr class="">
                             <td><?php echo $key + 1; ?></td>
                             <td>
-                                <?php echo $value['short']; ?>
+                                <?php echo $value['short_text']; ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
