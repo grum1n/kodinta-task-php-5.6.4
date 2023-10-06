@@ -30,7 +30,7 @@ $site_title = 'Dashboard - Edit News';
 
                 <div>
                     <label>Full</label>
-                    <textarea class="text-input" name="full" id="body" ><?php echo $full; ?></textarea>
+                    <textarea class="text-input" name="full" id="editor" ><?php echo $full; ?></textarea>
                 </div>
 
                 <div class="">
