@@ -49,7 +49,7 @@ function getPublishedNews()
 {
     global $conn;
 
-    $sql = "SELECT * FROM news WHERE visible=1";
+    $sql = "SELECT * FROM news WHERE visible='1' AND NOW() >= visible_at";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -60,8 +60,23 @@ function getNewsByTypeId($type_id)
 {
 
     global $conn;
+
+    $sql = "SELECT * FROM news";
+
+    $news_limit = [
+        1 => ['limit' => 5],
+        2 => ['limit' => 6],
+        3 => ['limit' => 2],
+        4 => ['limit' => 7]
+    ];
+
+    foreach($news_limit as $key => $value){
+        if($key == $type_id){
+            $limit =  $value['limit'];
+            $sql = $sql . " WHERE visible=1 AND news_type_id=$type_id AND NOW() >= visible_at LIMIT $limit";
+        }
+    }
     
-    $sql = "SELECT * FROM news WHERE visible=1 AND news_type_id=$type_id";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);

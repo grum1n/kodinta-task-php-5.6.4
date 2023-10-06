@@ -60,7 +60,6 @@ if (isset($_POST['update-type-btn'])) {
         
         $id = $_POST['id'];
         unset($_POST['update-type-btn'], $_POST['id']);
-      ;
         $title = $_POST['title'];
         
         $sql = "UPDATE news_type SET title='$title' WHERE id='$id'";

@@ -12,9 +12,6 @@ $site_title = 'Dashboard';
 
     <div class="right-container">
         <div class="card">
-            <p>
-                <a href="<?php echo BASE_URL . '/views/authorized/users/create.php' ?>" class="add-btn-green">ADD USER</a>
-            </p>
             <h2>Users</h2>
             <?php include(ROOT_PATH . '/app/includes/authorized/messages.php'); ?>
 
@@ -22,7 +19,7 @@ $site_title = 'Dashboard';
                 <thead>
                     <th>#</th>
                     <th>News</th>
-                    <th>Action</th>
+                    <th>&nbsp;</th>
                 </thead>
                 <tbody>
                     <?php if(count($users) > 0) : ?>
@@ -33,8 +30,7 @@ $site_title = 'Dashboard';
                                     <?php echo $value['user']; ?>
                                 </td>
                                 <td>
-                                    <a href="" class="action-btn-green">EDIT</a>
-                                    <a href=""class="action-btn-red">DELETE</a>
+                                &nbsp;
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -46,8 +42,6 @@ $site_title = 'Dashboard';
                                     <?php echo 'No data'; ?>
                                 </td>
                             </tr>
-                        
-
                     <?php endif; ?>
                 </tbody>
             </table>

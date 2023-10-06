@@ -1,28 +1,23 @@
 <?php
 include(ROOT_PATH . "/app/controllers/newsTypes.php");
+
 $news = array();
 
 if (isset($_GET['nt_id'])) {
     $news = getNewsByTypeId($_GET['nt_id']);
-    // $postsTitle = "You searched for posts under '" . $_GET['name'] . "'";
-} else if (isset($_POST['search-term'])) {
-    // $postsTitle = "You searched for '" . $_POST['search-term'] . "'";
-    // $posts = searchPosts($_POST['search-term']);
 } else {
     $news = getPublishedNews();
 }
+
+krsort($news);
 ?>
 <main class="page-wrapper">
     <!-- content -->
     <div class="content clearfix">
 
         <div class="page-content">
-            <h1 class="recent-posts-title">News</h1>
-            <!-- <ul class="news-filter">
-                <li>5 News per page </li>
-                <li>10 News per page </li>
-                <li>20</li>
-            </ul> -->
+            <h1 class="recent-posts-title">News  <?php echo '( ' . count($news) . ' )'; ?></h1>
+           
             <?php foreach ($news as $card) : ?>
                 <div class="post clearfix">
 
