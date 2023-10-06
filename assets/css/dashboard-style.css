@@ -607,13 +607,14 @@ main li:first-child a:hover, main li:first-child a:active{
     width: 100%;
     border-collapse: collapse;
 }
+
 .card table th:first-child, td:first-child{
     width: 50px;
-    padding: 16px;
     text-align: center;
     border-bottom: 1px solid rgb(12, 122, 150);
 }
 .card table th:nth-child(2), td:nth-child(2){
+    padding: 16px 0;
     text-align: left;
     padding-left: 16px;
     border-bottom: 1px solid rgb(12, 122, 150);

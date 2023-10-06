@@ -7,10 +7,10 @@ $site_title = 'Dashboard - News Types';
 
 ?>
 
-<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php');?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php'); ?>
 <main>
 
-    <?php include(ROOT_PATH . '/app/includes/authorized/dashboardSidebar.php');?>
+    <?php include(ROOT_PATH . '/app/includes/authorized/dashboardSidebar.php'); ?>
 
     <div class="right-container">
         <div class="card">
@@ -46,4 +46,4 @@ $site_title = 'Dashboard - News Types';
         </div>
     </div>
 </main>
-<?php include(ROOT_PATH . '/app/includes/authorized/dashboardFooter.php');?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardFooter.php'); ?>

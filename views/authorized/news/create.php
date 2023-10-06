@@ -7,10 +7,10 @@ $site_title = 'Dashboard - Create news';
 
 ?>
 
-<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php');?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php'); ?>
 <main>
 
-    <?php include(ROOT_PATH . '/app/includes/authorized/dashboardSidebar.php');?>
+    <?php include(ROOT_PATH . '/app/includes/authorized/dashboardSidebar.php'); ?>
 
     <div class="right-container">
         <div class="add-new-form">
@@ -29,13 +29,13 @@ $site_title = 'Dashboard - Create news';
 
                 <div>
                     <label>Full</label>
-                    <textarea class="text-input" name="full" id="editor" ><?php echo $full; ?></textarea>
+                    <textarea class="" name="full" id="editor"><?php echo $full; ?></textarea>
                 </div>
 
                 <div class="">
                     <?php if (empty($visible)) : ?>
                         <label>
-                            <input type="checkbox" name="visible" value="<?php echo $visible; ?>"/> visible
+                            <input type="checkbox" name="visible" value="<?php echo $visible; ?>" /> visible
                         </label>
                     <?php else : ?>
                         <label>
@@ -45,7 +45,7 @@ $site_title = 'Dashboard - Create news';
                 </div>
 
                 <div class="">
-                    <select class="" name="news_type_id" >
+                    <select class="text-input" name="news_type_id">
                         <option value="">Select a news type</option>
 
                         <?php foreach ($news_types as $key => $type) : ?>
@@ -59,7 +59,7 @@ $site_title = 'Dashboard - Create news';
 
                     </select>
                 </div>
-                <input type="hidden" name="created_at" value="<?php echo (new \DateTime('NOW', new DateTimeZone('Europe/Vilnius')))->format('Y-m-d H:i:s'); ?>"/>
+                <input type="hidden" name="created_at" value="<?php echo (new \DateTime('NOW', new DateTimeZone('Europe/Vilnius')))->format('Y-m-d H:i:s'); ?>" />
 
                 <div>
                     <label for="Visible">Visible at:</label>
@@ -74,4 +74,4 @@ $site_title = 'Dashboard - Create news';
     </div>
 </main>
 
-<?php include(ROOT_PATH . '/app/includes/authorized/dashboardFooter.php');?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardFooter.php'); ?>

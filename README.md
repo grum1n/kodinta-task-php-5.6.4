@@ -1,9 +1,18 @@
 
+#   dar daug vietu kur reikia optimizuoti
+    css reikia pravalyti kurie nebenaudojami.
+    ckdeditor dar negali ikelti foto nes, nesu naudojęs anksčiau.
+    turiu pvz. bet dar neaišku kaip ten viskas atvaizuoojama ant frotend, nes nekontroliuoju koks per editor išdėstymas.
+    pvz: kartu failas ir tekstas, failas dešinėje tekstas kairėje BOLD, o kitas failas viršuje, tekstas apačioje h6 ir tt.
+    nevienodai.
+
 #   user crud created
 
     reikia optimizuoti ir pakeisti   
     $sql = "SELECT * FROM users WHERE user = '$username'";
     $sql = "SELECT * FROM users WHERE user = ? , password = ?";
+
+    
 
 #   kodinta task php environment 5.6.40
 

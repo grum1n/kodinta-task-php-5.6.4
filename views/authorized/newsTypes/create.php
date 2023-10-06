@@ -7,10 +7,10 @@ $site_title = 'Dashboard - Add News Type';
 
 ?>
 
-<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php');?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php'); ?>
 <main>
 
-    <?php include(ROOT_PATH . '/app/includes/authorized/dashboardSidebar.php');?>
+    <?php include(ROOT_PATH . '/app/includes/authorized/dashboardSidebar.php'); ?>
 
     <div class="right-container">
         <div class="add-new-form">
@@ -33,4 +33,4 @@ $site_title = 'Dashboard - Add News Type';
         </div>
     </div>
 </main>
-<?php include(ROOT_PATH . '/app/includes/authorized/dashboardFooter.php');?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardFooter.php'); ?>

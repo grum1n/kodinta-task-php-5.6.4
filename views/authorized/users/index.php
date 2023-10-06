@@ -5,10 +5,10 @@ adminOnly();
 $site_title = 'Dashboard';
 
 ?>
-<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php');?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php'); ?>
 <main>
 
-    <?php include(ROOT_PATH . '/app/includes/authorized/dashboardSidebar.php');?>
+    <?php include(ROOT_PATH . '/app/includes/authorized/dashboardSidebar.php'); ?>
 
     <div class="right-container">
         <div class="card">
@@ -22,7 +22,7 @@ $site_title = 'Dashboard';
                     <th>&nbsp;</th>
                 </thead>
                 <tbody>
-                    <?php if(count($users) > 0) : ?>
+                    <?php if (count($users) > 0) : ?>
                         <?php foreach ($users as $key => $value) : ?>
                             <tr class="">
                                 <td><?php echo $key + 1; ?></td>
@@ -30,25 +30,25 @@ $site_title = 'Dashboard';
                                     <?php echo $value['user']; ?>
                                 </td>
                                 <td>
-                                &nbsp;
+                                    &nbsp;
                                 </td>
                             </tr>
                         <?php endforeach; ?>
 
-                        <?php else : ?>
-                        
-                            <tr class="">
-                                <td>
-                                    <?php echo 'No data'; ?>
-                                </td>
-                            </tr>
+                    <?php else : ?>
+
+                        <tr class="">
+                            <td>
+                                <?php echo 'No data'; ?>
+                            </td>
+                        </tr>
                     <?php endif; ?>
                 </tbody>
             </table>
 
         </div>
     </div>
-    
+
 </main>
 
-<?php include(ROOT_PATH . '/app/includes/authorized/dashboardFooter.php');?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardFooter.php'); ?>

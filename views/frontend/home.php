@@ -16,8 +16,8 @@ krsort($news);
     <div class="content clearfix">
 
         <div class="page-content">
-            <h1 class="recent-posts-title">News  <?php echo '( ' . count($news) . ' )'; ?></h1>
-           
+            <h1 class="recent-posts-title">News <?php echo '( ' . count($news) . ' )'; ?></h1>
+
             <?php foreach ($news as $card) : ?>
                 <div class="post clearfix">
 

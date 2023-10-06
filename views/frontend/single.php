@@ -1,6 +1,4 @@
 <div class="page-wrapper">
-
-    <!-- content -->
     <div class="content clearfix">
         <div class="page-content single">
             <h2 style="text-align: center;"><?php echo $info['short_text']; ?> </h2>
@@ -10,16 +8,11 @@
         </div>
 
         <div class="sidebar single">
-            <!-- Popular Posts -->
+          
             <div class="section popular">
                 <h2>Popular</h2>
-
-                
-
             </div>
-            <!-- // Popular Posts -->
 
-           
             <div class="section topics">
                 <h2>News types</h2>
                 <ul>
@@ -32,9 +25,7 @@
                     <?php endforeach; ?>
                 </ul>
             </div>
-          
+
         </div>
     </div>
-    <!-- // content -->
-
 </div>
