@@ -33,6 +33,18 @@ function selectOne($table, $id)
     return $records;
 }
 
+function selectIdForEdit($table, $id)
+{
+    global $conn;
+    $sql = "SELECT * FROM $table WHERE id=$id";
+    
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $records = $stmt->get_result()->fetch_assoc();
+    return $records;
+}
+
 function getPublishedNews()
 {
     global $conn;

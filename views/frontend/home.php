@@ -11,63 +11,57 @@ if (isset($_GET['nt_id'])) {
 } else {
     $news = getPublishedNews();
 }
-
-// dd($news);
 ?>
-<main>
+<main class="page-wrapper">
+    <!-- content -->
+    <div class="content clearfix">
 
-    <div>
-        <h2>
-            News types
+        <div class="page-content">
+            <h1 class="recent-posts-title">News</h1>
+            <!-- <ul class="news-filter">
+                <li>5 News per page </li>
+                <li>10 News per page </li>
+                <li>20</li>
+            </ul> -->
+            <?php foreach ($news as $card) : ?>
+                <div class="post clearfix">
 
-        </h2>
+                    <img src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" class="post-image" alt="">
 
+                    <div class="post-content">
 
-        <?php foreach ($newsTypes as $n_type) : ?>
-            <div>
-                <a href="<?php echo BASE_URL . '/index.php?nt_id=' . $n_type['id'] . '&title=' . $n_type['title']; ?>">
-                    <?php echo $n_type['title']; ?>
-                </a>
-            </div>
-        <?php endforeach; ?>
-    </div>
+                        <h2 class="post-title"><a href="news.php?id=<?php echo $card['id']; ?>"><?php echo $card['short_text']; ?></a></h2>
 
-    <h2>
-        News list
-
-    </h2>
-    <div>
-        <ul>
-            <li>5 News per page </li>
-            <li>10 News per page </li>
-            <li>20</li>
-        </ul>
-    </div>
-
-    <?php foreach ($news as $card) : ?>
-        <div style="border:1px dotted #ff6600;padding:4px;margin-bottom:6px;">
-            <p>
-                <a href="news.php?id=<?php echo $card['id']; ?>">
-                    <?php echo $card['short_text']; ?>
-                </a>
-              
-                <br />
-
-                <?php echo date('F j, Y'); ?>
-
-            </p>
-            <p>
-
-                <?php
-                if (date('F j, Y') == $card['visible_at']) {
-                    echo date('F j, Y', strtotime($card['visible_at']));
-                } else {
-                    echo 'news are here... wait';
-                }
-                ?>
-
-            </p>
-
+                        <div class="post-info">
+                            <i class="fa fa-user-o"></i><?php echo $card['full']; ?>
+                            &nbsp;
+                            <i class="fa fa-calendar"></i> <?php //echo date('F j, Y', strtotime($card['	visible_at'])); 
+                                                            ?>
+                        </div>
+                        <p class="post-body">
+                            <?php //echo html_entity_decode(substr($card['body'], 0, 150) . '...'); 
+                            ?>
+                        </p>
+                        <a href="news.php?id=<?php echo $card['id']; ?>" card="read-more">Read More</a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
-    <?php endforeach; ?>
+
+        <div class="sidebar">
+            <div class="section topics">
+                <h2>News types</h2>
+                <ul>
+                    <?php foreach ($newsTypes as $n_type) : ?>
+                        <li>
+                            <a href="<?php echo BASE_URL . '/index.php?nt_id=' . $n_type['id'] . '&title=' . $n_type['title']; ?>">
+                                <?php echo $n_type['title']; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- // content -->
 </main>

@@ -6,13 +6,14 @@ adminOnly();
 $site_title = 'Dashboard';
 
 ?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php');?>
+<main>
 
-<?php include(ROOT_PATH . '/app/includes/authorized/dashboardHeader.php'); ?>
+    <?php include(ROOT_PATH . '/app/includes/authorized/dashboardSidebar.php');?>
+    
+    <div class="right-container" >
+       dashboard content
+    </div>   
+</main>
 
-content Dashboard
-
-<br />
-
-<?php include(ROOT_PATH . '/app/includes/authorized/messages.php'); ?>
-
-<?php include(ROOT_PATH . '/app/includes/public/footer.php'); ?>
+<?php include(ROOT_PATH . '/app/includes/authorized/dashboardFooter.php');?>

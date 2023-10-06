@@ -1,7 +1,7 @@
 <?php
 include_once(ROOT_PATH . "/app/config/db.php");
 include(ROOT_PATH . "/app/helpers/middleware.php");
-include_once(ROOT_PATH . "/app/helpers/validateUser.php");
+include(ROOT_PATH . "/app/helpers/validateUser.php");
 
 $users = selectAll('users');
 
@@ -53,6 +53,7 @@ if(isset($_POST['login-btn'])){
                 // header("Location: ../index.php?=login=error");
                 // exit();
             } elseif ($hashedPwdCheck == true) {
+                $_SESSION['u_id'] =  $user['id'];
                 $_SESSION['username'] =  $username;
                 $_SESSION['message'] = "User logged in successfully";
                 header('Location: ' . BASE_URL . '/views/authorized/dashboard.php');
